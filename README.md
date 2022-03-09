@@ -1,14 +1,22 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+## Expressions Editor
 
-First, run the development server:
+This is a next.js/react.js based webapp, using tiptap as a WYSIWYG rich-text editing tool. 
+
 
 ```bash
 npm run dev
 # or
 yarn dev
 ```
+
+Extensions used from tiptap:
+
+```bash
+npm i @tiptap/react @tiptap/extension-document @tiptap/extension-paragraph @tiptap/extension-text @tiptap/extension-image @tiptap/extension-dropcursor --save
+```
+check here for all extensions:
+https://tiptap.dev/api/extensions
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
