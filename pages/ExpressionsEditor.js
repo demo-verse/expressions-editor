@@ -6,7 +6,7 @@ import Text from "@tiptap/extension-text";
 import Image from "@tiptap/extension-image";
 import Dropcursor from "@tiptap/extension-dropcursor";
 
-export default () => {
+const ExpressionsEditor =  () => {
   const editor = useEditor({
     extensions: [Document, Paragraph, Text, Image, Dropcursor],
     content: `Write a title and hit enter`,
@@ -28,3 +28,7 @@ export default () => {
     </div>
   );
 };
+
+ExpressionsEditor.displayName = 'ExpressionsEditor';
+
+export default ExpressionsEditor;
