@@ -9,11 +9,11 @@ export default function Home() {
 
   const NavBar = () => {
     return (
-      <div style= {{flex: 0, color: "wheat"}}>
+      <div className='navBar' style= {{flex: 0, color: "wheat"}}>
       <nav>
-     <button className='exprSettingsBtn'>settings</button>     
+     <button className='exprSettingsBtn'>save</button>     
      
-     <button className='addFriendsBtn'>add a friend</button>
+     <button className='addFriendsBtn'>mint</button>
 
 
       </nav>
@@ -28,7 +28,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-   <NavBar/>
 
       <main className={styles.main}>
           
@@ -36,6 +35,7 @@ export default function Home() {
       <ExpressionsEditor/>
 
       </main>
+   <NavBar/>
 
       <footer className={styles.footer}>
         <a

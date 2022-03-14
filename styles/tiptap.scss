@@ -17,8 +17,9 @@
   align-self: center;
   padding: 12px;
 
-  margin-left: 10px;
+  margin-left: 20px;
   margin-top: 20px;
+  margin-bottom: 20px;
 
   background-color: hsl(115, 91%, 69%);
 }
@@ -28,6 +29,8 @@
   background-color: hsl(54, 91%, 69%);
   margin-left: 40px;
   margin-top: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 
 }
 
@@ -35,17 +38,19 @@
 .exprSettingsBtn {
   background-color: hsl(203, 75%, 73%);
   margin-left: 40px;
-
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 
 h4 {
-  font-size: xx-large;
+  font-size: x-large;
   margin-left: 4em;
   margin-right: 4em;
 
-  margin-bottom: "10px";
-  margin-top: "12px";
+  // margin-bottom: "10px";
+  // margin-top: "20px";
+  vertical-align: middle;
   max-width: 80%;
   // align-self: center;
   text-align: center;
@@ -57,6 +62,10 @@ body {
 
 .expression {
   background-color: rgb(211, 159, 159);
+  max-width: "100%";
+  // position:relative;
+  max-height: "200px";
+
   // padding: 5rem 0;
   // flex: 0;
   // display: flex;
@@ -66,6 +75,9 @@ body {
 }
 p {
   background-color: bisque;
-  padding: 20px;
-  margin: 10px;
+  // max-width: fit-content;
+  max-height: "60";
+  padding: 2.4px;
+  margin: 2px;
+  // overflow-y: hidden;
 }
