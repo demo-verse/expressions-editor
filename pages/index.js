@@ -11,9 +11,9 @@ export default function Home() {
     return (
       <div className='navBar' style= {{flex: 0, color: "wheat"}}>
       <nav>
-     <button className='exprSettingsBtn'>save</button>     
+     {/* <button className='exprSettingsBtn'>save</button>     
      
-     <button className='addFriendsBtn'>mint</button>
+     <button className='addFriendsBtn'>mint</button> */}
 
 
       </nav>

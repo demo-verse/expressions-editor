@@ -8,7 +8,7 @@ import StarterKit from '@tiptap/starter-kit';
 // import Dropcursor from "@tiptap/extension-dropcursor";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBold, faCode, faHeading, faItalic, faParagraph, faStrikethrough, faUndo, faRedo } from '@fortawesome/free-solid-svg-icons'
+import { faBold, faCode, faHeading, faItalic, faParagraph, faStrikethrough, faUndo, faRedo, faList, faListOl } from '@fortawesome/free-solid-svg-icons'
 
 const MenuBar = ({ editor }) => {
   if (!editor) {
@@ -94,14 +94,16 @@ const MenuBar = ({ editor }) => {
         onClick={() => editor.chain().focus().toggleBulletList().run()}
         className={editor.isActive('bulletList') ? 'is-active' : ''}
       >
-                      bulletList
+                      
+      <FontAwesomeIcon icon={faList} />
 
       </button>
       <button
         onClick={() => editor.chain().focus().toggleOrderedList().run()}
         className={editor.isActive('orderedList') ? 'is-active' : ''}
       >
-        ordered list
+      <FontAwesomeIcon icon={faListOl} />
+
       </button>
       <button
         onClick={() => editor.chain().focus().toggleCodeBlock().run()}
@@ -141,8 +143,24 @@ const ExpressionsEditor =  () => {
 
   const editor = useEditor({
     extensions: [Document, Paragraph, Text, Image, StarterKit],
-    content: `Make a title here and press enter`,
+    content: ``,
   });
+
+const saveText = () => {
+  
+  const text = editor.getText();
+  // txt = "";
+  if (text.length > 0)
+    setTxt(text);
+    return text;
+  
+}
+
+const getSavedText = () => {
+  // saveText();
+  console.log(saveText());
+
+}
 
   const addImage = () => {
     const url = window.prompt("Enter link to image");
@@ -163,10 +181,15 @@ const ExpressionsEditor =  () => {
   return (
     <div className="expression">
       <h4>Express yourself!</h4>
-      <MenuBar editor={editor} />
+      <MenuBar className="richTextMenu" editor={editor} />
       <EditorContent editor={editor} />
 
       <button className="imgBtn" onClick={addImage}>Link an image</button>
+      {/* <button className='saveBtn' onClick={saveText}>save</button>     
+      <button className='saveBtn' onClick={getSavedText}>getSaved</button>     
+      */}
+     {/* <button className='mintBtn'>mint</button> */}
+
       {/* <button className="imgBtn" onClick={cont}>set content</button>
       <button className="imgBtn" onClick={showSome}>show some part</button> */}
 
